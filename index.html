@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+
+        <script>
+        
+        let randomNumber = Math.random();
+
+        function computerPlay() {
+             if (randomNumber < .33) {
+                 return "Rock";
+             } else if (randomNumber >= .34 && randomNumber <= .66) {
+                return "Paper";
+             } else {
+                 return "Scissor";
+             }
+        }
+
+        function playRound() {
+            if (playerSelection === computerSelection) {
+                return "It was a draw";
+            } else if (playerSelection == "Rock" && computerSelection == "Scissor",
+                       playerSelection == "Sciossor" && computerSelection == "Paper",
+                       playerSelection == "Paper" && computerSelection == "Rock") {
+                           return "You win " +playerSelection+ " beats " + computerSelection;
+                       } else {
+                           return "You lose " + playerSelection + " doesn't beat " + computerSelection;
+                       }
+        }
+
+        const playerSelection = "Paper";
+        const computerSelection = computerPlay();
+
+        console.log(playRound())
+
+        
+        </script>
+    </body>
+</html>
